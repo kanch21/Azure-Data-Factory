@@ -11,14 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_ablob_covidreportingsa'"
 		},
-		"ls_adls_covidreportingdl_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_adls_covidreportingdl'"
-		},
-		"ls_adls_covidreportingdl_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://covidreporting2108dl.dfs.core.windows.net/"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -48,12 +40,6 @@
 					},
 					"ls_ablob_covidreportingsa_connectionString": {
 						"value": "[parameters('ls_ablob_covidreportingsa_connectionString')]"
-					},
-					"ls_adls_covidreportingdl_accountKey": {
-						"value": "[parameters('ls_adls_covidreportingdl_accountKey')]"
-					},
-					"ls_adls_covidreportingdl_properties_typeProperties_url": {
-						"value": "[parameters('ls_adls_covidreportingdl_properties_typeProperties_url')]"
 					}
 				}
 			},

@@ -8,12 +8,6 @@
 		"ls_ablob_covidreportingsa_connectionString": {
 			"value": ""
 		},
-		"ls_adls_covidreportingdl_accountKey": {
-			"value": ""
-		},
-		"ls_adls_covidreportingdl_properties_typeProperties_url": {
-			"value": "https://covidreporting2108dl.dfs.core.windows.net/"
-		},
 		"containerUri": {
 			"value": ""
 		},
