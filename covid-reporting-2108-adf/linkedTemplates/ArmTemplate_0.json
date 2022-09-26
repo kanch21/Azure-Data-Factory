@@ -90,16 +90,17 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "ls_ablob_covidreportingsa",
+					"referenceName": "ls_adls_covidreportingdl",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
-						"type": "AzureBlobStorageLocation",
+						"type": "AzureBlobFSLocation",
 						"fileName": "population_by_age.tsv",
-						"container": "raw"
+						"folderPath": "population",
+						"fileSystem": "raw"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
@@ -109,7 +110,7 @@
 				"schema": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_ablob_covidreportingsa')]"
+				"[concat(variables('factoryId'), '/linkedServices/ls_adls_covidreportingdl')]"
 			]
 		},
 		{
@@ -145,7 +146,7 @@
 							"sink": {
 								"type": "DelimitedTextSink",
 								"storeSettings": {
-									"type": "AzureBlobStorageWriteSettings"
+									"type": "AzureBlobFSWriteSettings"
 								},
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
